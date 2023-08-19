@@ -1,0 +1,29 @@
+{
+  "name": "rackabecix",
+  "version": "1.0.0-alpha",
+  "description": "A Discord bot built with Discord.js, offering features for an enhanced community experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuellegendre/rackabecix.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "docker",
+    "discordjs",
+    "discord-bot"
+  ],
+  "author": "Samuel Legendre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuellegendre/rackabecix/issues"
+  },
+  "homepage": "https://github.com/samuellegendre/rackabecix#readme",
+  "dependencies": {
+    "discord.js": "^14.13.0"
+  }
+}
