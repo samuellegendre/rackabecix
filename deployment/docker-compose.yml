@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  # Service for running the Rackabecix image
+  rackabecix:
+    image: samuellegendre/rackabecix
+    container_name: rackabecix
+    restart: always
+    environment:
+      - TOKEN=<TOKEN>
+      - CLIENT_ID=<CLIENT_ID>
+      - DEPLOY_COMMANDS=true
+      - FORCE_INITIALIZE_DATABASE=false
+    volumes:
+      - ./db:/rackabecix/db/storage
+
+  # Service for automatically updating the Rackabecix image
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: always
+    volumes:
+      # Mount the Docker socket to allow Watchtower to monitor running containers
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Mount the host's timezone information to ensure timestamps are correct
+      - /etc/localtime:/etc/localtime:ro
+    command: --cleanup rackabecix

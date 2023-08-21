@@ -1,6 +1,6 @@
 {
   "name": "rackabecix",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-alpha.1",
   "description": "A Discord bot built with Discord.js, offering features for an enhanced community experience.",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/samuellegendre/rackabecix#readme",
   "dependencies": {
-    "discord.js": "^14.13.0"
+    "discord.js": "^14.13.0",
+    "sequelize": "^6.32.1",
+    "sqlite3": "^5.1.6"
   }
 }
