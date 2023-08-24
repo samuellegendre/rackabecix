@@ -2,7 +2,7 @@
 
 ![Docker Image Version (latest semver)](https://img.shields.io/docker/v/samuellegendre/rackabecix)
 
-Rackabecix is a simple Discord bot built with [Discord.js](https://discord.js.org/). It offers features such as a quoting system and realtime subreddit feeds.
+Rackabecix is a simple Discord bot built with [Discord.js](https://discord.js.org/). It offers features such as a quoting system, birthday reminders and live subreddit feeds.
 
 ## Deployment
 
@@ -22,11 +22,11 @@ Before deploying the Rackabecix bot, ensure you meet the following prerequisites
 
 2. **Configure Environment Variables**: Edit the `docker-compose.yml` file to include your bot's `TOKEN` and `CLIENT_ID`. Replace `<TOKEN>` and `<CLIENT_ID>` with your bot's token and client ID, respectively.
 
-- The `DEPLOY_COMMANDS` environnement variable is optional and set to `true` by default. It enables the deployment of global commands.
+    - The `DEPLOY_COMMANDS` environnement variable is optional and set to `true` by default. It enables the deployment of global commands.
+  
+    - The `FORCE_INITIALIZE_DATABASE` variable is also optional and set to `false` by default. It force the initialization of the database on startup creating a fresh database and resetting the existing one.
 
-- The `FORCE_INITIALIZE_DATABASE` variable is also optional and set to `false` by default. It force the initialization of the database on startup creating a fresh database and resetting the existing one.
-
-4. **Start the Services**: Use the command `docker-compose up -d` to start both the Rackabecix bot and Watchtower services. The bot service is configured to restart automatically and will persist across reboots with a mounted volumes for database storage.
+3. **Start the Services**: Use the command `docker-compose up -d` to start both the Rackabecix bot and Watchtower services. The bot service is configured to restart automatically and will persist across reboots with a mounted volumes for database storage.
 
 To stop the services, you can run the command `docker-compose down` from the same directory.
 
