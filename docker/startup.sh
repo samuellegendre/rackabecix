@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ "$DEPLOY_COMMANDS" != "false" ]; then
   node deploy-commands.js  
 fi

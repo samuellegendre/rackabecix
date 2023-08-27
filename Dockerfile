@@ -1,5 +1,5 @@
 # Use the official Node.js image as the base image
-FROM node
+FROM node:alpine
 
 # Set the working directory to /rackabecix
 WORKDIR /rackabecix
