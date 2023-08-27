@@ -65,6 +65,9 @@ jobs:
 
   merge:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
     needs:
       - build
     steps:
